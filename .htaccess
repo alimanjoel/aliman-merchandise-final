@@ -1,0 +1,5 @@
+Options -Indexes
+DirectoryIndex index.php
+<FilesMatch "^(database\.php|integrations-config(?:\.example)?\.php|.*\.(sql|sqlite|json|log|zip|md|txt)|\..*)$">
+    Require all denied
+</FilesMatch>

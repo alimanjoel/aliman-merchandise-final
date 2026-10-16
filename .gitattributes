@@ -1,0 +1,4 @@
+# Preserve the supplied source bytes on Windows and Unix.
+* -text
+*.jpg binary
+*.woff2 binary

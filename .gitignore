@@ -1,0 +1,23 @@
+# Private local settings
+/database.php
+/integrations-config.php
+.env
+.env.*
+!.env.example
+
+# Runtime data
+/storage/*
+!/storage/.gitkeep
+!/storage/.htaccess
+/uploads/*
+!/uploads/.gitkeep
+!/uploads/.htaccess
+*.log
+*.zip
+*.sql.gz
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
