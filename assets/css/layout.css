@@ -1,0 +1,345 @@
+/* Shared page shell and responsive navigation. */
+.skip-link {
+  position: fixed;
+  z-index: 2000;
+  left: 16px;
+  top: -100px;
+  background: var(--white);
+  padding: 12px 20px;
+  border: 2px solid var(--accent);
+}
+.skip-link:focus {
+  top: 12px;
+}
+.announcement {
+  padding: 8px 20px;
+  text-align: center;
+  background: var(--accent);
+  color: #fffbea;
+  font-size: 15px;
+  letter-spacing: 0.015em;
+}
+.site-header {
+  max-width: 1376px;
+  margin: auto;
+  padding: 26px 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--plum);
+  font: 800 34px/1 var(--heading);
+  letter-spacing: -0.07em;
+}
+.brand:hover {
+  text-decoration: none;
+}
+.brand img {
+  width: 44px;
+  height: 44px;
+}
+.brand-sub {
+  display: block;
+  margin-top: 8px;
+  font:
+    600 12px/1 "DM Sans",
+    sans-serif;
+  letter-spacing: 0.23em;
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.site-header nav > a:not(.button) {
+  color: var(--ink);
+  padding: 8px 0;
+}
+.site-header nav a[aria-current] {
+  box-shadow: 0 2px 0 var(--accent);
+}
+.nav-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.count {
+  display: inline-grid;
+  place-items: center;
+  background: var(--soft);
+  color: var(--accent);
+  border-radius: 50%;
+  font-size: 14px;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 5px;
+}
+.app-shell {
+  max-width: 1376px;
+  margin: 0 auto;
+}
+.container {
+  min-width: 0;
+  padding: 32px 44px 80px;
+  min-height: 65vh;
+}
+.site-footer {
+  max-width: 1288px;
+  margin: auto;
+  padding: 38px 0 28px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr auto;
+  align-items: start;
+  gap: 36px;
+  font-size: 16px;
+}
+.footer-brand {
+  color: var(--plum);
+  font: 800 26px/1.2 var(--heading);
+  letter-spacing: -0.05em;
+}
+.site-footer p {
+  color: var(--muted);
+  margin: 12px 0 18px;
+}
+.footer-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.footer-bottom {
+  font-size: 14px;
+}
+.entry-footer {
+  max-width: 1288px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0 28px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 15px;
+}
+.staff-page {
+  background: #f5f4ee;
+}
+.staff-page .site-header {
+  max-width: 1550px;
+  padding: 23px 32px;
+  border-bottom: 1px solid var(--line);
+}
+.staff-page .app-shell {
+  max-width: 1550px;
+  display: grid;
+  grid-template-columns: 216px minmax(0, 1fr);
+}
+.staff-page .container {
+  padding: 36px 32px 72px;
+}
+.staff-page .site-footer {
+  margin: 0 32px 0 248px;
+  max-width: none;
+}
+.workspace-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: start;
+  position: sticky;
+  top: 24px;
+  margin: 36px 0;
+  padding: 0 18px 0 24px;
+  gap: 5px;
+}
+.role-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0 12px 14px;
+}
+.workspace-nav a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #68685e;
+  border-radius: 6px;
+  padding: 11px 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.workspace-nav a:hover {
+  background: #eeeee4;
+  text-decoration: none;
+  color: var(--accent);
+}
+.workspace-nav a[aria-current] {
+  background: var(--accent);
+  color: #fff;
+}
+.workspace-nav .icon {
+  width: 18px;
+  height: 18px;
+}
+.workspace-note {
+  margin: 24px 12px 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--muted);
+}
+.error-page {
+  max-width: 680px;
+  margin: 8vh auto;
+}
+@media (max-width: 1300px) {
+  .site-footer,
+  .entry-footer {
+    margin-left: 44px;
+    margin-right: 44px;
+  }
+  .staff-page .app-shell {
+    grid-template-columns: 194px minmax(0, 1fr);
+  }
+  .staff-page .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .workspace-nav {
+    padding-left: 16px;
+    padding-right: 8px;
+  }
+  .staff-page .site-footer {
+    margin-left: 218px;
+  }
+}
+@media (max-width: 1000px) {
+  .site-header {
+    padding: 22px 28px;
+  }
+  .site-header nav {
+    gap: 20px;
+  }
+  .container {
+    padding: 28px 28px 64px;
+  }
+  .site-footer,
+  .entry-footer {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+  .staff-page .app-shell {
+    display: block;
+  }
+  .workspace-nav {
+    position: static;
+    flex-direction: row;
+    overflow: auto;
+    margin: 0;
+    padding: 12px 24px;
+    gap: 5px;
+    border-bottom: 1px solid var(--line);
+  }
+  .workspace-nav a {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 9px 14px;
+  }
+  .workspace-nav .role-label,
+  .workspace-note {
+    display: none;
+  }
+  .staff-page .site-footer {
+    margin: 0 24px;
+  }
+}
+@media (max-width: 760px) {
+  .announcement {
+    font-size: 14px;
+  }
+  .site-header,
+  .staff-page .site-header {
+    position: relative;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+  .brand {
+    font-size: 30px;
+  }
+  .brand img {
+    width: 40px;
+    height: 40px;
+  }
+  .site-header nav {
+    flex: 1 0 100%;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 16px;
+  }
+  .site-header nav > a:not(.button) {
+    padding: 5px 0;
+  }
+  .site-header .text-button {
+    font-size: 15px;
+  }
+  .site-header nav > .inline-form {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .site-header nav > .nav-workspace {
+    display: none;
+  }
+  .welcome-page .site-header nav {
+    flex: 0 1 auto;
+    gap: 20px;
+  }
+  .welcome-page .site-header nav > a:first-child {
+    display: inline-flex;
+  }
+  .welcome-page .site-header nav > .button {
+    display: none;
+  }
+  .container,
+  .staff-page .container {
+    padding: 24px 20px 52px;
+  }
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .site-footer,
+  .entry-footer,
+  .staff-page .site-footer {
+    margin: 0 20px;
+  }
+  .entry-footer {
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+  .workspace-nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .nav-cart .icon {
+    display: none;
+  }
+}
